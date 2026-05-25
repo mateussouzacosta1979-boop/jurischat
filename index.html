@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Na Ponta da Chave | Intranet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginView" class="login-page">
+    <div class="login-card">
+      <div class="brand-badge">NPC</div>
+      <h1>Na Ponta da Chave</h1>
+      <p>Central interna da equipe</p>
+
+      <form id="loginForm">
+        <label for="username">Usuário</label>
+        <input id="username" type="text" placeholder="admin" autocomplete="username" required />
+
+        <label for="password">Senha</label>
+        <input id="password" type="password" placeholder="1234" autocomplete="current-password" required />
+
+        <button type="submit">Entrar</button>
+        <span id="loginError" class="error"></span>
+      </form>
+
+      <div class="test-users">
+        <strong>Usuários teste</strong>
+        <span>admin / 1234</span>
+        <span>venda / 1234</span>
+        <span>locacao / 1234</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-badge small">NPC</div>
+        <div>
+          <strong>Intranet</strong>
+          <span>Na Ponta da Chave</span>
+        </div>
+      </div>
+      <nav id="menu"></nav>
+      <button id="logoutBtn" class="logout">Sair</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="pageSubtitle">Resumo da operação</p>
+        </div>
+        <div class="user-pill">
+          <span id="currentUserName">Admin</span>
+          <small id="currentUserRole">Administrador</small>
+        </div>
+      </header>
+
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
